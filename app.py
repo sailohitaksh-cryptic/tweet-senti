@@ -61,7 +61,7 @@ st.sidebar.header("word cloud")
 word_sentiment = st.sidebar.radio('Display word cloud for what sentiment?',('positive','neutral','negative'))
 
 if not st.sidebar.checkbox('close',True,key='3'):
-    sub.header('Word Cloud for %s sentiment' % (word_sentiment))
+    st.header('Word Cloud for %s sentiment' % (word_sentiment))
     df=data[data['airline_sentiment']==word_sentiment]
     words = ' '.join(df['text'])
     processed_words = ' '.join([word for word in words.slit() if 'http' not in word and not word.startswith('@') and word != 'RT'])
