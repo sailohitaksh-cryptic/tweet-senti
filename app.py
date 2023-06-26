@@ -58,7 +58,7 @@ if len(choice) > 0:
     st.plotly_chart(fig_choice)
 
 st.sidebar.header("word cloud")
-word_sentiment = st.header.radio('Display word cloud for what sentiment?',('positive','neutral','negative'))
+word_sentiment = st.sidebar.radio('Display word cloud for what sentiment?',('positive','neutral','negative'))
 
 if not st.sidebar.checkbox('close',True,key='3'):
     sub.header('Word Cloud for %s sentiment' % (word_sentiment))
